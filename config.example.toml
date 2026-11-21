@@ -1,0 +1,30 @@
+# noeddns configuration file
+# Default search locations:
+#   1. Explicit via --config /path/to/config.toml
+#   2. ./config.toml
+#   3. ~/.config/noeddns/config.toml
+#   4. /etc/noeddns/config.toml
+
+# Cloudflare API Bearer Token (requires Zone.DNS:Edit permissions)
+# Can also be set via environment variable: export CLOUDFLARE_API_TOKEN="your_token_here"
+api_token = "your_cloudflare_api_token_here"
+
+# The Cloudflare zone name (root domain)
+zone = "siamer.xyz"
+
+# List of DNS records to synchronize with public IP (A for IPv4, AAAA for IPv6)
+records = [
+    "siamer.xyz",
+    "www.siamer.xyz",
+    "home.siamer.xyz"
+]
+
+# Cloudflare CDN proxy (orange cloud). Default: false
+proxied = false
+
+# DNS record TTL in seconds (1 = automatic). Default: 1
+ttl = 1
+
+# SQLite database path for persistent IP history and sync audit logs.
+# Default: ~/.local/share/noeddns/ddns.sqlite
+# db_path = "~/.local/share/noeddns/ddns.sqlite"
