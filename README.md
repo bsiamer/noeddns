@@ -1,5 +1,8 @@
 # noeddns
 
+[![License: BSD-2-Clause](https://img.shields.io/badge/License-BSD--2--Clause-blue.svg)](LICENSE)
+[![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange.svg)](Cargo.toml)
+
 > **The ultimate Cloudflare Dynamic DNS (DDNS) client for Linux with zero idle memory footprint.**
 
 `noeddns` is a blazingly fast, resilient Cloudflare DDNS client written in Rust. It was designed from the ground up for Linux to monitor and update Cloudflare DNS records (`A` and `AAAA`) with **0.0 MB RAM usage when idle**.
